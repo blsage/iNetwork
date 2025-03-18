@@ -23,6 +23,7 @@ enum InternetPhase: Equatable {
     case connected
     case disconnected
 }
+```
 
 ### `onNetworkChange` Modifier
 
