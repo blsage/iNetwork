@@ -1,6 +1,6 @@
 # iNetwork
 
-iNetwork is a Swift package for iOS 17+ that monitors network connectivity changes and provides a custom environment value—`internetPhase`—that behaves similarly to SwiftUI’s built-in `scenePhase`.
+iNetwork is a Swift package that monitors network connectivity changes and provides a custom environment value—`internetPhase`—that behaves similarly to SwiftUI’s built-in `scenePhase`.
 
 ## Installation
 
