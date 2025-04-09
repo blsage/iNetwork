@@ -3,7 +3,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "iNetwork",
+    name: "union-network",
     platforms: [
         .iOS(.v13),
         .macOS(.v10_15),
@@ -12,13 +12,13 @@ let package = Package(
     ],
     products: [
         .library(
-            name: "iNetwork",
-            targets: ["iNetwork"]
+            name: "UnionNetwork",
+            targets: ["UnionNetwork"]
         ),
     ],
     targets: [
         .target(
-            name: "iNetwork"
+            name: "UnionNetwork"
         ),
     ]
 )

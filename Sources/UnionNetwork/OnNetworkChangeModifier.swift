@@ -1,21 +1,12 @@
 //
-//  iNetwork.swift
-//  iNetwork
+//  OnNetworkChangeModifier.swift
+//  union-network
 //
-//  Created by Benjamin Sage on 3/17/25.
+//  Created by Ben Sage on 4/9/25.
 //
 
 import SwiftUI
 import Network
-
-public enum InternetPhase: Equatable, Sendable {
-    case connected
-    case disconnected
-}
-
-extension EnvironmentValues {
-    @Entry public var internetPhase: InternetPhase = .disconnected
-}
 
 struct OnNetworkChangeModifier: ViewModifier {
     let action: (InternetPhase, InternetPhase) -> Void
@@ -51,30 +42,5 @@ struct OnNetworkChangeModifier: ViewModifier {
                     }
                 }
             }
-    }
-}
-
-extension View {
-    public func onNetworkChange(
-        perform action: @escaping (InternetPhase, InternetPhase) -> Void = { _, _ in }
-    ) -> some View {
-        modifier(OnNetworkChangeModifier(action: action))
-    }
-
-    @available(iOS, deprecated: 17.0, message: "Use the two-parameter onNetworkChange version instead")
-    public func onNetworkChange(perform action: @escaping (InternetPhase) -> Void) -> some View {
-        modifier(OnNetworkChangeModifier(action: { _, new in action(new) }))
-    }
-}
-
-@available(iOS 14.0, *)
-public struct InternetWindowGroup<Content: View>: Scene {
-    let content: () -> Content
-
-    public var body: some Scene {
-        WindowGroup {
-            content()
-                .onNetworkChange()
-        }
     }
 }

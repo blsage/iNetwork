@@ -1,10 +1,10 @@
-# iNetwork
+# UnionNetwork
 
-iNetwork is a Swift package that monitors network connectivity changes and provides a custom environment value—`internetPhase`—that behaves similarly to SwiftUI’s built-in `scenePhase`.
+UnionNetwork is a Swift package that monitors network connectivity changes and provides a custom environment value—`internetPhase`—that behaves similarly to SwiftUI’s built-in `scenePhase`.
 
 ## Installation
 
-Add iNetwork to your project via Swift Package Manager.
+Add UnionNetwork to your project via Swift Package Manager.
 
 ## API
 
